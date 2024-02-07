@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedding B2S</title>
+  </head>
+  <body>
+    <h1>'Too Much Pressure!' 🥸🥸🥸</h1>
+    <h2>-Ed gets nervous 😨😓</h2>
+    <link rel="stylesheet" href="styles.css" />
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+    deserunt, illo voluptatum molestiae nemo quaerat alias. Ipsum odit eligendi
+    sequi, autem voluptates tenetur voluptas accusantium, similique, temporibus
+    sed saepe voluptatem.
+
+    <div>
+        <fieldset id="first_row_of_buttons">
+            <legend>Filter the view!</legend>
+            <input type="button" value="Oregon and Washington only" 
+            id="Oregon and Washington">
+            <input type="button" value="Clear Filter" 
+            id="clear_filter">
+            <input type="button" value="Undo" 
+            id="undo">
+        </fieldset>
+    </div>
+    <div class="content">
+      <tableau-viz
+        id="tableauViz"
+        src="https://public.tableau.com/views/Superstore_embedded_800x800/Overview?:language=en-US&:display_count=n&:origin=viz_share_link"
+        toolbar="bottom" height="80vh" width="80vw"
+      </tableau-viz>
+    </div>
+    <script
+      type="module"
+      src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+    ></script>
+    <script src='app.js' defer></script>
+<fieldset id="second_row_of_buttons">
+    <legend>Filter cities for a range of values!</legend>
+    <input type="number" placeholder="min value" id="minValue" />
+    <input type="number" placeholder="max value" id="maxValue" /> 
+    <input type="button" value="Filter Range" id="filter_range" />
+</fieldset>
+  </body>
+</html>
